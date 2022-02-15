@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +30,10 @@ Route::middleware(['auth'])->group(function () {
         Route::put('update', [App\Http\Controllers\UserManagementController::class, 'update'])->name('user.update');
         Route::post('destroy', [App\Http\Controllers\UserManagementController::class, 'destroy'])->name('user.destroy');
     });
+    Route::resource('kategori', CategoryController::class);
+    Route::get('kategori/get/{id}', [CategoryController::class, 'get']);
+    Route::post('kategori/update', [CategoryController::class, 'update']);
+
+
 });
 

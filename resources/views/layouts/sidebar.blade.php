@@ -16,7 +16,7 @@
             </li>
             <li class=" nav-item"><a href="{{route('user.index')}}"><i class="feather icon-mail"></i><span class="menu-title" data-i18n="User">User Operator</span></a>
             </li>
-            <li class=" nav-item"><a href=""><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat">Kategori</span></a>
+            <li class=" nav-item"><a href="/kategori"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat">Kategori</span></a>
             </li>
             <li class=" navigation-header"><span>Manajement Arsip</span>
             </li>
