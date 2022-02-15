@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\User;
-use Yajra\DataTables\DataTables;
 use Alert;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserManagementController extends Controller
 {
@@ -30,7 +32,8 @@ class UserManagementController extends Controller
         //         ->make(true);
         // }
         $data = User::get();
-        return view('useroperator.index',compact('data'));
+        $user =  Auth::user();
+        return view('useroperator.index',compact('data','user'));
     }
 
     public function store(Request $request)

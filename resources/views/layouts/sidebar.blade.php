@@ -10,13 +10,13 @@
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item"><a href="{{route('home')}}"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+            <li class=" nav-item {{ Request::is('home') ? 'active' : '' }}"><a href="{{route('home')}}"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
             </li>
             <li class=" navigation-header"><span>Master Data</span>
             </li>
-            <li class=" nav-item"><a href="{{route('user.index')}}"><i class="feather icon-mail"></i><span class="menu-title" data-i18n="User">User Operator</span></a>
+            <li class=" nav-item {{ Request::is('user-management') ? 'active' : '' }}"><a href="{{route('user.index')}}"><i class="feather icon-mail"></i><span class="menu-title" data-i18n="User">User Operator</span></a>
             </li>
-            <li class=" nav-item"><a href="/kategori"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat">Kategori</span></a>
+            <li class=" nav-item {{ Request::is('kategori') ? 'active' : '' }}"><a href="/kategori"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat">Kategori</span></a>
             </li>
             <li class=" navigation-header"><span>Manajement Arsip</span>
             </li>

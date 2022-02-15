@@ -5,7 +5,7 @@
     <div class="col">
         <div class="card">
             <div class="card-body">
-                <button class="btn btn-primary btn-sm mb-3" data-toggle="modal" data-target="#tambahUser">+ Tambah User</button>
+                <button class="btn btn-primary  mb-3" data-toggle="modal" data-target="#tambahUser">+ Tambah User</button>
                 <table id="tableUser" class="table table-hover display" width="100%">
                     <thead>
                         <tr>
@@ -13,7 +13,7 @@
                             <th class="text-left">Nama</th>
                             <th class="text-left">Username</th>
                             <th class="text-left">Email</th>
-                            <th class="text-center">Aksi</th>
+                            <th class="">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
